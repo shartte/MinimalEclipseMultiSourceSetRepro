@@ -1,0 +1,16 @@
+
+plugins {
+  id 'java'
+}
+
+sourceSets {
+  secondary
+}
+repositories {
+  mavenCentral()
+}
+dependencies {
+  implementation 'org.slf4j:slf4j-api:2.0.13'
+  secondaryImplementation 'ch.qos.logback:logback:0.5'
+}
+assemble.dependsOn secondaryClasses
